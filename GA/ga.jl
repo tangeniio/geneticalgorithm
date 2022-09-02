@@ -31,9 +31,9 @@ function maximum(optG)
 end
 
 # ╔═╡ 9bafd5f1-935a-434e-8a30-3415e0eed5a6
-function populate(input,size)
+function populate(input,size) 
 	G = Array{genes}(undef, input)
-	defaultGenes = rand([1,0],size)
+	defaultGenes = rand([1,0],size)##
 	defaultFitness = 0
 	for i = 1:input
 		G[i] = genes(defaultGenes,defaultFitness)
@@ -58,7 +58,7 @@ end
 
 # ╔═╡ d3612443-07d5-41b4-849d-ec6ac1d053e8
 function getFit(P)
-	gSize = size(P.genes[1].genePool)
+	gSize = size(P.genes[1].genePool)  #Quick edit test
 	f = genes(zeros(gSize),0)
 	l = length(P.genes)
 	for i = 1:l
